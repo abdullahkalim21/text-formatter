@@ -1,0 +1,125 @@
+:root {
+    --black-color: #333333;
+    --white-color: #ffffff;
+    --yellow-color: #ffbd59;
+    --yellow-hover-color: #ff9900;
+}
+
+::selection {
+    background-color: var(--yellow-hover-color);
+    color: var(--black-color);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--black-color);
+    color: var(--yellow-color);
+    width: 500px;
+    height: auto;
+}
+
+h1 {
+    font-size: 18px;
+    margin: 15px 10px;
+    color: var(--yellow-color);
+}
+
+textarea {
+    width: 90%;
+    height: 60px;
+    margin: 10px 5%;
+    padding: 10px;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+button {
+    background-color: var(--yellow-color);
+    color: var(--black-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: var(--yellow-hover-color);
+    }
+}
+
+.result-container {
+    margin: 10px;
+}
+
+.result {
+    background: var(--black-color);
+    border: 1px solid var(--yellow-color);
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-wrap: break-word;
+}
+
+.copy-btn {
+    margin-top: 10px;
+    background-color: var(--black-color);
+    color: var(--yellow-color);
+    border: 1px solid var(--yellow-color);
+
+    &:hover {
+        color: var(--black-color);
+    }
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--yellow-color);
+    color: var(--black-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease, bottom 0.5s ease;
+    z-index: 1000;
+}
+
+.notification.show {
+    opacity: 1;
+    bottom: 40px;
+}
+
+.notification.hidden {
+    display: none;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-links a {
+    margin: 10px;
+    color: var(--primary-hover-color);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
