@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Formatter</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="popup.css">
+    <!-- Google Material Fonts/Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
 </head>
 
 <body>
@@ -15,18 +17,26 @@
     <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
 
     <div class="options">
-        <button id="capitalizeAll">CAPITALIZE WHOLE TEXT</button>
-        <button id="capitalizeInitial">Capitalize Initial Letters</button>
-        <button id="capitalizeFirst">Capitalize first letter</button>
-        <button id="lowercaseAll">lowercase all</button>
+        <button id="capitalizeAll"><span class="material-symbols-rounded">uppercase</span> CAPITALIZE WHOLE TEXT</button>
+        <button id="capitalizeInitial"><span class="material-symbols-rounded">
+            match_case
+            </span> Capitalize Initial Letters</button>
+        <button id="capitalizeFirst"><span class="material-symbols-rounded">
+            segment
+            </span> Capitalize first letter</button>
+        <button id="lowercaseAll"><span class="material-symbols-rounded">
+            lowercase
+            </span> lowercase all</button>
     </div>
 
     <div class="result-container">
         <h2>Result</h2>
         <div id="result" class="result"></div>
-        <button id="copyResult" class="copy-btn">Copy Result</button>
+        <button id="copyResult" class="copy-btn"><span class="material-symbols-rounded">
+            content_copy
+            </span> Copy Result</button>
     </div>
-    <div id="notification" class="notification hidden">Text copied to clipboard!</div>
+    <div id="notification" class="notification hidden">✔ Text copied to clipboard!</div>
 
     <div class="social-links">
         <h3>Connect with Developer: </h3>
