@@ -9,15 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const capitalizeInitial = () => {
-        resultDiv.textContent = inputText.value
-            .toLowerCase()
-            .replace(/\b\w/g, (char) => char.toUpperCase());
+        resultDiv.textContent = inputText.value.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
     };
 
     const capitalizeFirst = () => {
         const text = inputText.value;
-        resultDiv.textContent =
-            text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+        resultDiv.textContent = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
     };
 
     const lowercaseAll = () => {
@@ -37,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const copyResult = () => {
         navigator.clipboard.writeText(resultDiv.textContent).then(() => {
-            showNotification("Text copied to clipboard!");
+            showNotification("✔ Text copied to clipboard!");
         });
     };
 
