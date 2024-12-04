@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultDiv = document.getElementById("result");
     const copyButton = document.getElementById("copyResult");
     const notification = document.getElementById("notification");
+    const wordCount = document.getElementById("words-count");
 
     const capitalizeAll = () => {
         resultDiv.textContent = inputText.value.toUpperCase();
@@ -19,6 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const lowercaseAll = () => {
         resultDiv.textContent = inputText.value.toLowerCase();
+    };
+
+    // Count words
+    const count = (s) => {
+        if (s.trim() === "") { return 0; }
+        return s.trim().split(/\s+/).length
+    };
+    // Update the word count
+    const updateWordCount = () => {
+        wordCount.innerHTML = `Total Words: ${count(inputText.value)}`;
     };
 
     const showNotification = (message) => {
@@ -43,4 +54,5 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("capitalizeFirst").addEventListener("click", capitalizeFirst);
     document.getElementById("lowercaseAll").addEventListener("click", lowercaseAll);
     copyButton.addEventListener("click", copyResult);
+    document.getElementById("inputText").addEventListener("input", updateWordCount);
 });
