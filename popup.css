@@ -9,8 +9,19 @@
     background-color: var(--yellow-hover-color);
     color: var(--black-color);
 }
-
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: var(--yellow-color);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--black-color);
+    border-radius: 5px;
+}
 .material-symbols-rounded {
+    margin-right: 10px;
     font-variation-settings:
         'FILL' 0,
         'wght' 400,
@@ -36,10 +47,10 @@ h1 {
 
 textarea {
     width: 90%;
-    height: 60px;
+    max-height: 100px;
     margin: 10px 5%;
     padding: 10px;
-    border: 1px solid var(--black-color);
+    border: 1px solid var(--yellow-hover-color);
     border-radius: 5px;
     font-size: 14px;
 }
@@ -72,7 +83,15 @@ button {
 .result-container {
     margin: 10px;
 }
-
+#words-count {
+    background-color: var(--yellow-color);
+    color: var(--black-color);
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+    max-width: 40%;
+    font-style: italic;
+}
 .result {
     background: var(--black-color);
     border: 1px solid var(--yellow-color);
