@@ -3,7 +3,7 @@
     "name": "Text Formatter",
     "version": "1.0",
     "description": "Easily format text by capitalizing, making lowercase, or applying custom transformations.",
-    "permissions": [],
+    "permissions": [ "scripting", "activeTab"],
     "action": {
         "default_popup": "popup.html",
         "default_icon": {
